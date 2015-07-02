@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titleWish" />
+    <EditText
+        android:background="@color/whitePink"
+        android:id="@+id/titleEditText"
+        android:hint="Title"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <EditText
+        android:id="@+id/editTextWish"
+        android:background="@color/whitePink"
+        android:layout_margin="10dp"
+        android:hint="your wish.."
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="start"
+        android:layout_below="@+id/titleEditText"/>
+    <Button
+        android:layout_margin="20dp"
+        android:text="Save"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editTextWish"
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

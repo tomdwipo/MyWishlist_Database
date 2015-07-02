@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Wishlist</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="titleWish">My Wishlist</string>
+    <string name="title_activity_display_wishes">DisplayWishesActivity</string>
+    <string name="title_activity_wish_detail">WishDetailActivity</string>
+</resources>
