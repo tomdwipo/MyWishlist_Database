@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         title.setText("");
         content.setText("");
 
-        Intent intent = new Intent(MainActivity.this , WishDetailActivity.class);
+        Intent intent = new Intent(MainActivity.this , DisplayWishesActivity.class);
         startActivity(intent);
     }
 
