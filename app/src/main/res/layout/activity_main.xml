@@ -34,7 +34,7 @@
         android:gravity="start"
         android:layout_below="@+id/titleEditText"/>
     <Button
-        android:layout_margin="20dp"
+        android:layout_margin="5dp"
         android:text="Save"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/editTextWish"
