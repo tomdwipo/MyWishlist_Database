@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -26,6 +27,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String CREATE_WISHES_TABLE = "CREATE TABLE " + Constants.TABLE_NAME + "(" +Constants.KEY_ID+
                 " INTEGER PRIMARY KEY," + Constants.TITLE_NAME + " TEXT, "+Constants.CONTENT_NAME+
                 " TEXT, " +Constants.DATE_NAME + " LONG);";
+        db.execSQL(CREATE_WISHES_TABLE);
 
     }
 
@@ -44,11 +46,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(Constants.DATE_NAME, java.lang.System.currentTimeMillis());
 
         db.insert(Constants.TABLE_NAME, null , values);
+        Log.v("iits works", "works");
         db.close();
     }
 
     public ArrayList<MyWish> getWishes(){
-        String selectQUery = "SELECT * FROM " +Constants.TABLE_NAME;
+        String selectQuery = "SELECT * FROM " +Constants.TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(Constants.TABLE_NAME, new String[]{Constants.KEY_ID, Constants.TITLE_NAME,
