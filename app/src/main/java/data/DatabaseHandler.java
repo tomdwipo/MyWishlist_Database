@@ -56,7 +56,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         Cursor cursor = db.query(Constants.TABLE_NAME, new String[]{Constants.KEY_ID, Constants.TITLE_NAME,
                                  Constants.CONTENT_NAME, Constants.DATE_NAME,},null,null,null,null,Constants.DATE_NAME+
-        "DESC");
+        " DESC");
         if (cursor.moveToFirst()){
             do {
 
