@@ -52,7 +52,7 @@ public class DisplayWishesActivity extends AppCompatActivity {
         wishAdapter = new WishAdapter(DisplayWishesActivity.this,R.layout.wish_row, dbWish);
         listview.setAdapter(wishAdapter);
         wishAdapter.notifyDataSetChanged();
-
+//
     }
 
     public class WishAdapter extends ArrayAdapter<MyWish>{
