@@ -4,13 +4,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class WishDetailActivity extends AppCompatActivity {
+    private TextView title, context, date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wish_detail);
+
+        title = (TextView)findViewById(R.id.titleWishSave);
+        date = (TextView)findViewById(R.id.dateWish);
+        context = (TextView)findViewById(R.id.myWishesSave);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            title.setText(extras.getString("title"));
+            date.setText("Created: "+ extras.getString("date"));
+            context.setText(" \" " +extras.getString("context") +" \" ");
+        }
     }
 
     @Override

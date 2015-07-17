@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_margin="16dp"
+    android:layout_height="50dp"
+    android:layout_width="match_parent" >
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:layout_marginTop="5dp"
+
     android:orientation="vertical">
 
     <ImageView
@@ -12,16 +18,21 @@
         android:layout_height="wrap_content" />
     <TextView
         android:layout_toRightOf="@+id/thumbnail"
+        android:paddingLeft="16dp"
         android:id="@+id/name"
+        android:textSize="14sp"
         android:text="Wish Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
         android:layout_toRightOf="@+id/thumbnail"
         android:layout_below="@+id/name"
+        android:paddingLeft="16dp"
         android:id="@+id/dateText"
         android:text="date"
+        android:textSize="14sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
 </RelativeLayout>
+    </LinearLayout>

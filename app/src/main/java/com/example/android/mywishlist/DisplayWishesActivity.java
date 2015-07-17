@@ -1,6 +1,7 @@
 package com.example.android.mywishlist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -109,7 +110,21 @@ public class DisplayWishesActivity extends AppCompatActivity {
 
             holder.myWish = getItem(position);
             holder.mDate.setText(holder.myWish.getRecordDate());
-            holder.mTitle.setText(holder.myWish.getTitle());
+            final ViewHolder finalHolder = holder;
+            holder.mTitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String text = finalHolder.myWish.getContent().toString();
+                    String dateText = finalHolder.myWish.getRecordDate().toString();
+                    String title = finalHolder.myWish.getRecordDate().toString();
+                    Intent i = new Intent(DisplayWishesActivity.this, WishDetailActivity.class);
+                   i.putExtra("context", text);
+                    i.putExtra("date", dateText);
+                    i.putExtra("title", title);
+                    startActivity(i);
+
+                }
+            });
 
             return row;
 
