@@ -109,6 +109,7 @@ public class DisplayWishesActivity extends AppCompatActivity {
                 holder = (ViewHolder)row.getTag();
             }
          //   holder.mTitle = getString(position);
+            holder.mTitle.setText(holder.myWish.getTitle());
             holder.myWish = getItem(position);
             holder.mDate.setText(holder.myWish.getRecordDate());
             final ViewHolder finalHolder = holder;
