@@ -116,11 +116,15 @@ public class DisplayWishesActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     String text = finalHolder.myWish.getContent().toString();
                     String dateText = finalHolder.myWish.getRecordDate().toString();
-                    String title = finalHolder.myWish.getRecordDate().toString();
+                    String title = finalHolder.myWish.getTitle().toString();
+
+                    int mid = finalHolder.myWish.getItemId();
+
                     Intent i = new Intent(DisplayWishesActivity.this, WishDetailActivity.class);
                    i.putExtra("context", text);
                     i.putExtra("date", dateText);
                     i.putExtra("title", title);
+                    i.putExtra("id",mid);
                     startActivity(i);
 
                 }
@@ -133,7 +137,7 @@ public class DisplayWishesActivity extends AppCompatActivity {
         class ViewHolder{
             MyWish myWish;
             TextView mTitle;
-            TextView mId;
+            int mId;
             TextView mCountent;
             TextView mDate;
 

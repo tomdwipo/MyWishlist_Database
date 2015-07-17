@@ -37,6 +37,14 @@
             android:id="@+id/dateWish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+    <Button
+        android:layout_centerHorizontal="true"
+      android:layout_below="@+id/dateWish"
+        android:text="delete"
+
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 
