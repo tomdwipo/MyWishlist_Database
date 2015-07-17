@@ -40,11 +40,12 @@ public class DisplayWishesActivity extends AppCompatActivity {
             String title = wishesFromDB.get(i).getTitle();
             String dateText = wishesFromDB.get(i).getRecordDate();
             String content = wishesFromDB.get(i).getContent();
-
+            int mid = wishesFromDB.get(i).getItemId();
             MyWish myWish = new MyWish();
             myWish.setTitle(title);
             myWish.setRecordDate(dateText);
             myWish.setContent(content);
+            myWish.setItemId(mid);
             dbWish.add(myWish);
 
         }
